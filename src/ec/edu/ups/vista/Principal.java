@@ -18,6 +18,9 @@ import java.util.Scanner;
 /**
  *
  * @author Domenica Cañizares
+ * @since 15-April-2019
+ * @version IDE 8.0.2 
+ * @Principal
  */
 public class Principal {
 
