@@ -8,6 +8,7 @@ package ec.edu.ups.vista;
 import ec.edu.ups.clases.Ballena;
 import ec.edu.ups.clases.Lagarto;
 import ec.edu.ups.clases.Perro;
+import ec.edu.ups.clases.Serpiente;
 import ec.edu.ups.controladores.ControladorBallena;
 import ec.edu.ups.controladores.ControladorLagarto;
 import ec.edu.ups.controladores.ControladorPerro;
@@ -69,47 +70,57 @@ public class Principal {
 
                                 System.out.println("Ingrese en nombre de la ballena ");
                                 String nombre = dato.next();
-                                //System.out.println("nombre "+nombre);
+                                ballena.setNombre(nombre);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el nombre cientifico ");
                                 String nomC = dato.next();
+                                ballena.setNomCientifico(nomC);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el peso ");
                                 double peso = dato.nextDouble();
+                                ballena.setPeso(peso);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el taman ");
                                 String tam = dato.next();
+                                ballena.setTamaño(tam);
                                 System.out.println("\n");
 
                                 System.out.println("ingrese el sexo ");
                                 String sex = dato.next();
+                                ballena.setSexo(sex);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el color ");
                                 String col = dato.nextLine();
+                                ballena.setColor(col);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese la veocidad ");
                                 double vel = dato.nextDouble();
+                                ballena.setVelocidad(vel);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el numero de huesos ");
                                 int numH = dato.nextInt();
+                                ballena.setNumHueso(numH);
                                 System.out.println("\n");
 
                                 System.out.println("Tiene pelo? \n Ingrese valores de 'true' o 'false' ");
                                 boolean pel = dato.nextBoolean();
+                                ballena.setPelo(pel);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese que come la ballena ");
                                 String comida = dato.nextLine();
+                                ballena.setComida(comida);
                                 System.out.println("\n");
 
                                 System.out.println("Ingresse su habitat ");
                                 String hab = dato.nextLine();
+                                ballena.setHabitat(hab);
                                 System.out.println("\n");
 
                                 break;
@@ -161,46 +172,57 @@ public class Principal {
                                 System.out.println("Ingrese en nombre del lagarto");
                                 String nombre = dato.next();
                                 //System.out.println("nombre "+nombre);
+                                lagarto.setNombre(nombre);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el tipo de sangre 'fria o caliente'");
                                 String tipoS = dato.next();
+                                lagarto.setSangre(tipoS);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese los años de vida");
                                 double aVida = dato.nextDouble();
+                                lagarto.setAñosVida(aVida);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el tipo de piel ");
                                 String tiPiel = dato.next();
+                                lagarto.setTipoPiel(tiPiel);
                                 System.out.println("\n");
 
                                 System.out.println("ingrese el modo de defensa ");
                                 String def = dato.next();
+                                lagarto.setModoDefensa(def);
                                 System.out.println("\n");
 
                                 System.out.println("¿Cambia de color? \n Ingrese valores de 'true' o 'false'");
                                 boolean camColor = dato.nextBoolean();
+                                lagarto.setCambiaColor(camColor);
                                 System.out.println("\n");
 
                                 System.out.println("Tiene extremidades \n Ingrese valores de 'true' o 'false'");
                                 boolean ext = dato.nextBoolean();
+                                lagarto.setExtremidades(ext);
                                 System.out.println("\n");
 
                                 System.out.println("¿Cuantos huevos tiene?");
                                 int numHu = dato.nextInt();
+                                lagarto.setNumHuevos(numHu);
                                 System.out.println("\n");
 
                                 System.out.println("¿Como se desplaza");
                                 String des = dato.nextLine();
+                                lagarto.setDesplazamiento(des);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el sexo");
                                 String sex = dato.nextLine();
+                                lagarto.setSexo(sex);
                                 System.out.println("\n");
 
                                 System.out.println("Ingresse el color del lagarto");
                                 String colorL = dato.nextLine();
+                                lagarto.setColor(colorL);
                                 System.out.println("\n");
                                 break;
                             case 2:
@@ -251,46 +273,57 @@ public class Principal {
                                 System.out.println("Ingrese en nombre del perro ");
                                 String nombre = dato.next();
                                 //System.out.println("nombre "+nombre);
+                                perro.setNombre(nombre);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese la raza");
                                 String razaP = dato.next();
+                                perro.setRaza(razaP);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese la audicion");
                                 double peso = dato.nextDouble();
+                                perro.setAudicion(peso);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese la temperatura corporal");
-                                String tam = dato.next();
+                                String temp = dato.next();
+                                perro.setTempCorporal(temp);
                                 System.out.println("\n");
 
                                 System.out.println("ingrese el sexo ");
                                 String sex = dato.next();
+                                perro.setSexo(sex);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el color ");
                                 String col = dato.nextLine();
+                                perro.setColor(col);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese la edad del perro");
-                                double vel = dato.nextDouble();
+                                double edadP = dato.nextDouble();
+                                perro.setEdad(edadP);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el numero de huesos ");
                                 int numH = dato.nextInt();
+                                perro.setNumHueso(numH);
                                 System.out.println("\n");
 
                                 System.out.println("Tiene pelo? \n Ingrese valores de 'true' o 'false' ");
                                 boolean pel = dato.nextBoolean();
+                                perro.setPelo(pel);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese que come el perro ");
                                 String comida = dato.nextLine();
+                                perro.setComida(comida);
                                 System.out.println("\n");
 
                                 System.out.println("Ingresse su habitat ");
                                 String hab = dato.nextLine();
+                                perro.setHabitat(hab);
                                 System.out.println("\n");
                                 break;
                             case 2:
@@ -299,7 +332,7 @@ public class Principal {
                                 break;
                             case 3:
                                 System.out.println("Has seleccionado la opción 'Update'");
-
+                                
                                 break;
                             case 4:
                                 System.out.println("Has seleccionado la opción 'Delete'");
@@ -332,13 +365,14 @@ public class Principal {
                         switch (opcion) {
                             case 1:
                                 System.out.println("Has seleccionado la opción 'Create'");
-                                Lagarto lagarto = new Lagarto();
+                                Serpiente serpiente = new Serpiente();
                                 Scanner dato = new Scanner(System.in);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese en nombre de la serpiente");
                                 String nombre = dato.next();
                                 //System.out.println("nombre "+nombre);
+                                serpiente.setNombre(nombre);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el tipo de sangre 'fria o caliente'");
@@ -383,7 +417,7 @@ public class Principal {
                                 break;
                             case 2:
                                 System.out.println("Has seleccionado la opción 'Read'");
-
+                                
                                 break;
                             case 3:
                                 System.out.println("Has seleccionado la opción 'Update'");
