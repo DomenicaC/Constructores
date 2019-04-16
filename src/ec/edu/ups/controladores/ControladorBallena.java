@@ -24,6 +24,9 @@ public class ControladorBallena {
     }
     
     public void create(Ballena objeto){
+        int codigoAun = 0;
+        int cod= codigoAun+1;
+        codigoAun=cod;
         lista.add(objeto);
     }
     

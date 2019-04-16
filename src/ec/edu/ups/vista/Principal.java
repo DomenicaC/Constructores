@@ -39,10 +39,10 @@ public class Principal {
         System.out.println("Bienvenido al proyecto Restaurante");
         while (!salir1) {
             System.out.println("1. CRUD Ballena");
-            System.out.println("1. CRUD Lagarto");
-            System.out.println("1. CRUD Perro");
-            System.out.println("1. CRUD Serpiente");
-            System.out.println("3. Salir");
+            System.out.println("2. CRUD Lagarto");
+            System.out.println("3. CRUD Perro");
+            System.out.println("4. CRUD Serpiente");
+            System.out.println("5. Salir");
 
             System.out.println("Elija una opcion");
             op = sn.nextInt();
@@ -53,7 +53,7 @@ public class Principal {
                 case 1:
                     System.out.println("A elegido la opcion Ballena \n");
 
-                    while (!salir) {
+                    while (!salir1) {
 
                         System.out.println("1. Create");
                         System.out.println("2. Read");
@@ -89,7 +89,7 @@ public class Principal {
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el taman ");
-                                String tam = dato.next();
+                                Double tam = dato.nextDouble();
                                 ballena.setTamaño(tam);
                                 System.out.println("\n");
 
@@ -132,7 +132,7 @@ public class Principal {
                                 break;
                             case 2:
                                 System.out.println("Has seleccionado la opción 'Read'");
-                                System.out.println("Ingrese el usuario a leer");
+                                System.out.println("Ingrese el codigo a leer");
                                 int codigo = dato.nextInt();
                                 System.out.println(controladorBallena.read(codigo));
                                 break;
@@ -154,7 +154,7 @@ public class Principal {
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el taman ");
-                                String tam1 = dato.next();
+                                double tam1 = dato.nextDouble();
                                 ballena.setTamaño(tam1);
                                 System.out.println("\n");
 
@@ -574,43 +574,54 @@ public class Principal {
 
                                 System.out.println("Ingrese el tipo de sangre 'fria o caliente'");
                                 String tipoS = dato.next();
+                                serpiente.setSangre(tipoS);
                                 System.out.println("\n");
 
-                                System.out.println("Ingrese la especie");
+                                /*System.out.println("Ingrese la especie");
                                 double aVida = dato.nextDouble();
-                                System.out.println("\n");
+                                ser
+                                System.out.println("\n");*/
 
                                 System.out.println("Ingrese la descripcion");
                                 String desc = dato.next();
+                                serpiente.setDescripcion(desc);
                                 System.out.println("\n");
 
                                 System.out.println("ingrese la alimentacion");
                                 String ali = dato.next();
+                                serpiente.setAlimentacion(ali);
                                 System.out.println("\n");
 
                                 System.out.println("¿Es venenosa? \n Ingrese valores de 'true' o 'false'");
                                 boolean veneno = dato.nextBoolean();
+                                serpiente.setVenenosa(veneno);
                                 System.out.println("\n");
 
                                 System.out.println("Tiene extremidades \n Ingrese valores de 'true' o 'false'");
                                 boolean ext = dato.nextBoolean();
+                                serpiente.setExtremidades(ext);
                                 System.out.println("\n");
 
                                 System.out.println("¿Cuantos huevos tiene?");
                                 int numHu = dato.nextInt();
+                                serpiente.setNumHuevos(numHu);
                                 System.out.println("\n");
 
                                 System.out.println("¿Como se desplaza");
                                 String des = dato.nextLine();
+                                serpiente.setDesplazamiento(des);
                                 System.out.println("\n");
 
                                 System.out.println("Ingrese el sexo");
                                 String sex = dato.nextLine();
+                                serpiente.setSexo(sex);
                                 System.out.println("\n");
 
                                 System.out.println("Ingresse el color de la serpiente");
                                 String colorL = dato.nextLine();
+                                serpiente.setColor(colorL);
                                 System.out.println("\n");
+                                
                                 controladorSerpiente.create(serpiente);
 
                                 break;
@@ -689,13 +700,17 @@ public class Principal {
                             case 5:
                                 System.out.println("Has seleccionado la opción Regresar");
 
-                                salir1 = true;
+                                salir = true;
                                 break;
                             default:
                                 System.out.println("Solo digite números entre 1 y 5");
                         }
                     }
-                    break;
+                    case 5:
+                                System.out.println("Has seleccionado la opción Regresar");
+
+                                salir1 = true;
+                                break;
             }
         }
     }

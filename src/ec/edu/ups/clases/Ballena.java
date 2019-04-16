@@ -17,7 +17,7 @@ import ec.edu.ups.interfaces.Interface;
 public final class Ballena extends Mamifero implements Interface{
     
     private double peso;
-    private String tamaño;
+    private double tamaño;
     private String nomCientifico;
     private double velocidad;
 
@@ -26,7 +26,7 @@ public final class Ballena extends Mamifero implements Interface{
 
     //constructor
 
-    public Ballena(double peso, String tamaño, String nomCientifico, double velocidad, int numHueso, boolean pelo, String comida, String habitat, int codigo, String nombre, String sexo, String color) {
+    public Ballena(double peso, double tamaño, String nomCientifico, double velocidad, int numHueso, boolean pelo, String comida, String habitat, int codigo, String nombre, String sexo, String color) {
         super(numHueso, pelo, comida, habitat, codigo, nombre, sexo, color);
         this.peso = peso;
         this.tamaño = tamaño;
@@ -40,7 +40,7 @@ public final class Ballena extends Mamifero implements Interface{
         this.peso = peso;
     }
 
-    public void setTamaño(String tamaño) {
+    public void setTamaño(double tamaño) {
         this.tamaño = tamaño;
     }
 
@@ -57,7 +57,7 @@ public final class Ballena extends Mamifero implements Interface{
         return peso;
     }
 
-    public String getTamaño() {
+    public double getTamaño() {
         return tamaño;
     }
 

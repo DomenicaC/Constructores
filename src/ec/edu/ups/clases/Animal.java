@@ -9,7 +9,7 @@ package ec.edu.ups.clases;
  * @author Domenica Cañizares
  * @since 12-April-2019
  * @version IDE 8.0.2 
- * Clase Abuelo
+ * @Clase Abuelo
  */
 public class Animal {
 

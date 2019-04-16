@@ -33,7 +33,7 @@ public class Prueba {
         perro.calcularEdad();
 
         //Clase ballena
-        Ballena ballena = new Ballena(40.000, "14 mts", "Balaenidae", 30, 230, false, "Peces", "Ocenano", 2, "Willy", "Macho", "Negro y Blanco");
+        Ballena ballena = new Ballena(40.000, 14, "Balaenidae", 30, 230, false, "Peces", "Ocenano", 2, "Willy", "Macho", "Negro y Blanco");
         System.out.println(ballena);
 
         //ballena.setFechaNacimiento(2000/02/03);
