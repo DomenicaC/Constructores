@@ -13,7 +13,9 @@ import ec.edu.ups.clases.Perro;
 import ec.edu.ups.clases.Reptil;
 import ec.edu.ups.clases.Serpiente;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -24,9 +26,60 @@ import java.util.List;
 public class Prueba {
 
     public static void main(String[] args) {
+        /**metodo equals
+         * cuando son diferentes clases no se puede comparar
+         */
+        Perro perro = new Perro();
+        perro.setCodigo(1);
+        perro.setNombre("Pancho");
+        
+        Perro perro1 = new Perro();
+        perro1.setCodigo(21);
+        perro1.setNombre("Ches");
+        
+        Ballena ballena = new Ballena();
+        ballena.setCodigo(1);
+        
+
+        if (perro.equals(perro1)) {
+
+            System.out.println("Son iguales perro y perro1:)");
+        }else {
+            System.out.println("No son iguales niguno:(");
+        }
+        
+        if (perro.equals(ballena)) {
+            System.out.println("Son iguales perro y ballena:)");
+        }else {
+            System.out.println("No son iguales niguno:(");
+        }
+        
+        if (perro1.equals(ballena)) {
+            System.out.println("Son iguales perro1 y ballena :)");
+        } else {
+            System.out.println("No son iguales niguno:(");
+        }
+        
+        /**
+         * interface set
+         */
+        Set<Perro> lista = new HashSet<>();
+        lista.add(perro);
+        lista.add(perro1);
+        
+        for (Perro per:lista) {
+            System.out.println("Perro "+per.getNombre());
+        }
+        
+        if(lista.contains(perro)){
+            System.out.println("Si existe");
+        }
+        
+        
+                
         //Clase perro
-        Perro perro = new Perro("Shitzu", 1, "39°C", 1000, 321, true, "Croquetas", "Casa", 1, "Pancho", "Macho", "Blanco");
-        System.out.println(perro);
+         //Perro perro = new Perro("Shitzu", 1, "39°C", 1000, 321, true, "Croquetas", "Casa", 1/*codigo*/, "Pancho", "Macho", "Blanco");
+        /*System.out.println(perro);
         System.out.println("Metodos Abstractos");
         perro.comer();
         perro.dormir();
@@ -234,6 +287,6 @@ public class Prueba {
         };
         System.out.println(Camaleon);
         System.out.println(Camaleon.calcularEdad());
-
+          */
     }
 }
