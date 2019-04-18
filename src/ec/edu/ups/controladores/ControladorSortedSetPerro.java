@@ -5,43 +5,40 @@
  */
 package ec.edu.ups.controladores;
 
-import ec.edu.ups.clases.Ballena;
-import ec.edu.ups.clases.Lagarto;
 import ec.edu.ups.clases.Perro;
-import ec.edu.ups.clases.Serpiente;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
  * @author Domenica Cañizares
  */
-public class ControladorSetLagarto {
-    private Set<Lagarto> lista;
+public class ControladorSortedSetPerro {
+    private SortedSet<Perro> lista;
     private int codigo;
 
-    public ControladorSetLagarto() {
-        lista = new HashSet<>();
-        codigo=1;
+    public ControladorSortedSetPerro() {
+        lista = new TreeSet<>();
+        codigo=0;
     }
     
-    public void create(Lagarto objeto){
+    public void create(Perro objeto){
         codigo ++;
         objeto.setCodigo(codigo);
         lista.add(objeto);
         
     }
             
-    public Lagarto read(int codigo){
-        for (Lagarto lag : lista) {
-            if (lag.getCodigo() == codigo) {
-                return lag;
+    public Perro read(int codigo){
+        for (Perro per : lista) {
+            if (per.getCodigo() == codigo) {
+                return per;
             }
         }
         return null;
     }
     
-    public ControladorSetLagarto update(Lagarto objeto){
+    public Perro update(Perro objeto){
         if(lista.contains(objeto)){
             lista.remove(objeto);
             lista.add(objeto);
@@ -49,8 +46,8 @@ public class ControladorSetLagarto {
         return null;
     }
     
-    public ControladorSetLagarto delete(Lagarto objeto){
-        for (Lagarto lag : lista) {
+    public Perro delete(Perro objeto){
+        for (Perro per : lista) {
             if (objeto.getCodigo() == codigo){
                 lista.remove(objeto);
                 break;
@@ -59,8 +56,11 @@ public class ControladorSetLagarto {
         return null;
     }
     
-    /**
-     *    
-    }*/
-    
+    public Perro print(){
+        System.out.println("Lista \n");
+        for (Perro per : lista) {
+            System.out.println(per);
+        }
+        return null;
+    }
 }

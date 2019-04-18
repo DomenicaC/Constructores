@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
@@ -75,7 +77,15 @@ public class Prueba {
             System.out.println("Si existe");
         }
         
+        System.out.println("Pepito".compareTo("Juanito"));
         
+        SortedSet<Perro>listaOrdenada = new TreeSet<>();//no permite duplicados
+        listaOrdenada.add(perro1);
+        listaOrdenada.add(perro);
+        
+        for (Perro perr : listaOrdenada) {
+            System.out.println(perr.getNombre());
+        }
                 
         //Clase perro
          //Perro perro = new Perro("Shitzu", 1, "39°C", 1000, 321, true, "Croquetas", "Casa", 1/*codigo*/, "Pancho", "Macho", "Blanco");

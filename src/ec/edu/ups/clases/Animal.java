@@ -11,7 +11,7 @@ package ec.edu.ups.clases;
  * @version IDE 8.0.2 
  * @Clase Abuelo
  */
-public class Animal {
+public class Animal implements Comparable<Animal>{
 
     private int codigo;
     private String nombre;
@@ -99,6 +99,20 @@ public class Animal {
         }
         return true;
     }
+
+    //metodos abstractos
+    @Override
+    public int compareTo(Animal o) {
+        if (nombre.compareTo(o.getNombre()) >= 1) {
+            return 1;
+        } else if (nombre.compareTo(o.getNombre()) <= -1) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+    
+    
 
     
 
